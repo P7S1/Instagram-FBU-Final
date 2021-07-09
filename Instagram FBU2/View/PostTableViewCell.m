@@ -10,6 +10,7 @@
 #import <SDWebImage/SDWebImage.h>
 #import "MediaManager.h"
 #import "ProfileViewController.h"
+#import "VideoHelper.h"
 @implementation PostTableViewCell
 
 - (void)awakeFromNib {

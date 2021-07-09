@@ -11,7 +11,7 @@
 #import "Post.h"
 #import "PostTableViewCell.h"
 #import "DetailViewController.h"
-
+#import "VideoHelper.h"
 @interface FeedViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -89,6 +89,20 @@
     DetailViewController* vc = [storyboard instantiateViewControllerWithIdentifier:@"DetailViewController"];
     vc.post = self.posts[indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    if (self.posts.count > 0){
+        NSIndexPath *indexPathAtCenter = [self.tableView indexPathForRowAtPoint:CGPointMake(self.tableView.bounds.size.width/2, self.tableView.bounds.size.height/2)];
+        [VideoHelper stopPlaying];
+        PostTableViewCell *centerCell = [self.tableView cellForRowAtIndexPath:indexPathAtCenter];
+        if (self.posts[indexPathAtCenter.row].video != nil){
+            NSURL* url = [[NSURL alloc]initWithString:self.posts[indexPathAtCenter.row].video.url];
+            [VideoHelper startPlayingAtVideoUrl:url];
+            [centerCell.imageView.layer addSublayer:VideoHelper.sharedPlayer];
+            VideoHelper.sharedPlayer.frame = CGRectMake(0, 0, 100, 100);
+        }
+    }
 }
 
 @end

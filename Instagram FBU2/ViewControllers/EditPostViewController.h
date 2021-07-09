@@ -10,7 +10,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface EditPostViewController : UIViewController
+
 @property (nonatomic, strong) UIImage* image;
+@property (nonatomic, strong) NSURL * _Nullable videoUrl;
+
 @end
 
 NS_ASSUME_NONNULL_END

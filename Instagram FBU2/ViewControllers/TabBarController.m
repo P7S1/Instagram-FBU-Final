@@ -49,6 +49,7 @@
         NSLog(@"Not a video");
         NSURL* videoURL = info[UIImagePickerControllerMediaURL];
         vc.image = [MediaManager getPlaceholderImageFromVideo:videoURL];
+        vc.videoUrl = videoURL;
     }else{
         vc.image = image;
     }

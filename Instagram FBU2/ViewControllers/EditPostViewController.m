@@ -8,6 +8,8 @@
 #import "EditPostViewController.h"
 #import "Post.h"
 #import "MediaManager.h"
+#import <SVProgressHUD/SVProgressHUD.h>
+
 @protocol EditPostViewControllerDelegate
 
 - (void)didPost:(Post *)post;
@@ -20,7 +22,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
-@property (nonatomic, strong) NSURL * _Nullable videoUrl;
 
 @end
 
@@ -62,12 +63,15 @@
 
 
 - (void) postButtonPressed{
+    [SVProgressHUD show];
     CGFloat aspectRatio = [MediaManager getImageAspectRatio:self.image.size];
     [Post postUserImage:self.image withCaption:self.textView.text withAspectRatio:aspectRatio withVideoIfAvaliable:self.videoUrl withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
         [self.navigationController popToRootViewControllerAnimated:YES];
         if (succeeded){
+            [SVProgressHUD dismiss];
             NSLog(@"Post posted successfully");
         }else{
+            [SVProgressHUD showErrorWithStatus:@"Error"];
             NSLog(@"Post posted failed");
             NSLog(@"%@", [error localizedDescription]);
         }
