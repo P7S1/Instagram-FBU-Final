@@ -13,4 +13,6 @@ typedef void(^getCurrentUserProfilePictureBlock) (NSURL * _Nullable url, NSError
 
 + (void) getCurrentUserProfileURL: (getCurrentUserProfilePictureBlock _Nullable) completion;
 
+//+ (UIImage*) getImageThumbnailFromVideo: videoUrl
++(UIImage * _Nonnull)getPlaceholderImageFromVideo:(NSURL * _Nonnull)videoURL;
 @end

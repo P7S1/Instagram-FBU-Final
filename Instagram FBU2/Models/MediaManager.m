@@ -9,8 +9,19 @@
 #import "MediaManager.h"
 #import <Parse/Parse.h>
 #import "UserProfile.h"
+#import <AVFoundation/AVFoundation.h>
 @implementation MediaManager : NSObject
 
++(UIImage *)getPlaceholderImageFromVideo:(NSURL *)videoURL {
+    AVAsset *asset = [AVAsset assetWithURL:videoURL];
+    AVAssetImageGenerator *imageGenerator = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+    CMTime time = [asset duration];
+    time.value = 0;
+    CGImageRef imageRef = [imageGenerator copyCGImageAtTime:time actualTime:NULL error:NULL];
+    UIImage *thumbnail = [UIImage imageWithCGImage:imageRef];
+    CGImageRelease(imageRef);
+    return thumbnail;
+}
 
 +(CGFloat) getImageAspectRatio: (CGSize) size{
     CGFloat aspectRatio = size.height / size.width;
@@ -91,6 +102,10 @@
                 completion(nil,error);
             }
     }];
+    
+    
+    
+    
     
 }
 @end

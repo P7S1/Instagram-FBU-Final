@@ -25,7 +25,7 @@
 @property (nonatomic, strong) NSArray * _Nullable likedUsers;
 
 
-+ (void) postUserImage: ( UIImage * _Nullable )image withCaption: ( NSString * _Nullable )caption withAspectRatio: (CGFloat) aspectRatio withCompletion: (PFBooleanResultBlock  _Nullable)completion;
++ (void) postUserImage: ( UIImage * _Nullable )image withCaption: ( NSString * _Nullable )caption withAspectRatio:(CGFloat)aspectRatio withVideoIfAvaliable: (NSURL * _Nullable)video withCompletion: (PFBooleanResultBlock  _Nullable)completion;
 
 typedef void(^getPostsBlock)(NSArray<Post*>* _Nullable posts, NSError* _Nullable error);
 

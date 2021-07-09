@@ -20,6 +20,8 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
+@property (nonatomic, strong) NSURL * _Nullable videoUrl;
+
 @end
 
 @implementation EditPostViewController
@@ -61,7 +63,7 @@
 
 - (void) postButtonPressed{
     CGFloat aspectRatio = [MediaManager getImageAspectRatio:self.image.size];
-    [Post postUserImage:self.image withCaption:self.textView.text withAspectRatio: aspectRatio withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
+    [Post postUserImage:self.image withCaption:self.textView.text withAspectRatio:aspectRatio withVideoIfAvaliable:self.videoUrl withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
         [self.navigationController popToRootViewControllerAnimated:YES];
         if (succeeded){
             NSLog(@"Post posted successfully");
