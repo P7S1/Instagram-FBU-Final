@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.h
-//  Instagram FBU2
+//  Instagram FBU
 //
-//  Created by Keng Fontem on 7/9/21.
+//  Created by Keng Fontem on 7/6/21.
 //
 
 #import <UIKit/UIKit.h>

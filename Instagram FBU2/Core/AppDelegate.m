@@ -1,12 +1,12 @@
 //
 //  AppDelegate.m
-//  Instagram FBU2
+//  Instagram FBU
 //
-//  Created by Keng Fontem on 7/9/21.
+//  Created by Keng Fontem on 7/6/21.
 //
 
 #import "AppDelegate.h"
-
+#import "Parse/Parse.h"
 @interface AppDelegate ()
 
 @end
@@ -16,6 +16,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    ParseClientConfiguration *config = [ParseClientConfiguration  configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
+        
+        NSString *path = [[NSBundle mainBundle] pathForResource: @"Keys" ofType: @"plist"];
+        NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile: path];
+        
+        NSString *applicationId= [dict objectForKey: @"application_id"];
+        NSString *clientKey = [dict objectForKey: @"client_key"];
+        
+        if (applicationId == nil || clientKey == nil){
+            [NSException raise:@"" format:@"application_id or cleint_id is not implemented in Keys.plist"];
+        }
+
+            configuration.applicationId = applicationId; // <- UPDATE
+            configuration.clientKey = clientKey; // <- UPDATE
+            configuration.server = @"https://parseapi.back4app.com";
+        }];
+
+        [Parse initializeWithConfiguration:config];
+    
     return YES;
 }
 
