@@ -2,7 +2,7 @@
 
 **FBU Instagram** is a photo sharing app using Parse as its backend.
 
-Time spent: **21** hours spent in total
+Time spent: **20** hours spent in total
 
 ## User Stories
 
@@ -51,34 +51,19 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. AVPlayer and using video
+2. Complex queries with parse
 
 ## Video Walkthroughs
 
-- Video Plyaer
-![](https://i.imgur.com/CrOJY3f.gif)
-
-- Liking/Commenting
-![](https://i.imgur.com/TsC61rP.gif)
-
-- User persistance
-![](https://i.imgur.com/zQhWNJ8.gif)
-
-- Sign In/ Register/ Log out
-![](https://i.imgur.com/mKFC7k1.gif)
-
-- Posting via Camera
-![](https://i.imgur.com/eGMU1u0.gif)
-
-- Liking/Details page/Comments
-![](https://i.imgur.com/TzfxBIf.gif)
-
-- Posting Via photo picker
-![](https://i.imgur.com/Axub9K3.gif)
-
-- Setting your Profile Picture
-![](https://i.imgur.com/Bx0XTZ8.gif)
+- [Video Player Posts](https://i.imgur.com/CrOJY3f.gif)
+- [Liking/Commenting](https://i.imgur.com/TsC61rP.gif)
+- [User persistance](https://i.imgur.com/zQhWNJ8.gif)
+- [Sign In/ Register/ Log out](https://i.imgur.com/mKFC7k1.gif)
+- [Posting via Camera](https://i.imgur.com/eGMU1u0.gif)
+- [Liking/Details page/Comments](https://i.imgur.com/TzfxBIf.gif)
+- [Posting Via photo picker](https://i.imgur.com/Axub9K3.gif)
+- [Setting your Profile Picture](https://i.imgur.com/Bx0XTZ8.gif)
 
 
 
@@ -97,7 +82,7 @@ List an 3rd party libraries, icons, graphics, or other assets you used in your a
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+- I tried to implement an auto-playing video feature similar to Instagram. However, due to time constraints I couldn't get it to work on time, so I settled to let the user manually play the videos with AVPlayerViewController. I learned from my mistakes from past projects and didn't waste a ton of time implementing only one feature.
 
 ## License
 
