@@ -7,7 +7,6 @@
 
 #import "AppDelegate.h"
 #import "Parse/Parse.h"
-#import "VideoHelper.h"
 @interface AppDelegate ()
 
 @end
@@ -18,8 +17,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     ParseClientConfiguration *config = [ParseClientConfiguration  configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
-        
-        VideoHelper.sharedPlayer = [[AVPlayerLayer alloc]init];
         
         NSString *path = [[NSBundle mainBundle] pathForResource: @"Keys" ofType: @"plist"];
         NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile: path];

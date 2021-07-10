@@ -857,14 +857,30 @@
                                                         </view>
                                                     </subviews>
                                                 </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wU7-cE-DuD">
+                                                    <rect key="frame" x="162.66666666666666" y="216.66666666666666" width="50" height="49.999999999999972"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="NDg-Ir-ftI"/>
+                                                        <constraint firstAttribute="height" constant="50" id="agZ-fJ-PAc"/>
+                                                    </constraints>
+                                                    <state key="normal" title=" " image="play.fill" catalog="system">
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="playButtonPressed:" destination="3Gc-ca-EQ6" eventType="touchUpInside" id="UMi-b3-sd7"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Ink-gp-XZ3" firstAttribute="top" secondItem="krq-10-f4F" secondAttribute="top" id="9pe-l3-nHd"/>
                                                 <constraint firstItem="Ink-gp-XZ3" firstAttribute="leading" secondItem="krq-10-f4F" secondAttribute="leading" id="AXS-dL-Vf3"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Ink-gp-XZ3" secondAttribute="bottom" id="MK5-ew-90f"/>
+                                                <constraint firstItem="wU7-cE-DuD" firstAttribute="centerX" secondItem="Jok-fQ-9zY" secondAttribute="centerX" id="Nsq-Ug-Hbj"/>
                                                 <constraint firstItem="Ink-gp-XZ3" firstAttribute="top" secondItem="krq-10-f4F" secondAttribute="topMargin" id="SER-Bm-T0Y"/>
                                                 <constraint firstAttribute="bottom" secondItem="Ink-gp-XZ3" secondAttribute="bottom" constant="16" id="V7Y-Qj-eeT"/>
                                                 <constraint firstAttribute="trailing" secondItem="Ink-gp-XZ3" secondAttribute="trailing" id="W2d-ec-2DB"/>
+                                                <constraint firstItem="wU7-cE-DuD" firstAttribute="centerY" secondItem="Jok-fQ-9zY" secondAttribute="centerY" id="ayB-KQ-hIp"/>
                                                 <constraint firstAttribute="bottom" secondItem="Ink-gp-XZ3" secondAttribute="bottom" constant="16" id="niy-WL-twm"/>
                                                 <constraint firstItem="Ink-gp-XZ3" firstAttribute="top" secondItem="krq-10-f4F" secondAttribute="top" id="zkr-tc-iaD"/>
                                             </constraints>
@@ -879,6 +895,7 @@
                                             <outlet property="captionLabel" destination="xhM-WR-BGE" id="B5h-g7-Uqy"/>
                                             <outlet property="dateLabel" destination="04G-1p-ggd" id="uqP-vu-SB2"/>
                                             <outlet property="likeButton" destination="vjw-hF-EGV" id="mu9-XJ-pXx"/>
+                                            <outlet property="playButton" destination="wU7-cE-DuD" id="KhG-fg-Wll"/>
                                             <outlet property="postImageView" destination="Jok-fQ-9zY" id="vbR-AZ-kHs"/>
                                             <outlet property="postImageViewHeightAnchor" destination="hl4-t4-gML" id="2mV-jU-LYW"/>
                                             <outlet property="profileImageView" destination="uBk-Dh-psB" id="xFU-vk-Zfw"/>
@@ -1169,6 +1186,7 @@
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.badge.plus" catalog="system" width="128" height="124"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="plus.square" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

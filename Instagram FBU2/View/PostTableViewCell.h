@@ -21,6 +21,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *likeButton;
 @property (nonatomic, strong) PFUser* _Nullable user;
 @property (nonatomic, strong) UIViewController* parentVC;
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
+
+
+
 -(void)setUpFromPost: (Post*)post parentViewControlller: (UIViewController*)parentVC;
 @property (nonatomic, strong) Post* post;
 

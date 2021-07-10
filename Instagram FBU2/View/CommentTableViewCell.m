@@ -39,4 +39,6 @@
     self.dateLabel.text = [MediaManager timeAgoStringFromDate:comment.creationDate];
 }
 
+- (IBAction)playButton:(id)sender {
+}
 @end

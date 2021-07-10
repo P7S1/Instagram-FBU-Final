@@ -10,7 +10,8 @@
 #import <SDWebImage/SDWebImage.h>
 #import "MediaManager.h"
 #import "ProfileViewController.h"
-#import "VideoHelper.h"
+#import <AVKit/AVKit.h>
+
 @implementation PostTableViewCell
 
 - (void)awakeFromNib {
@@ -19,6 +20,7 @@
     UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(profileButtonPressed)];
     [self.usernameLabel addGestureRecognizer:tapGesture];
     [self.usernameLabel setUserInteractionEnabled:YES];
+    self.playButton.layer.cornerRadius = self.playButton.frame.size.height/2;
     
 }
 
@@ -46,12 +48,24 @@
         }
     }
     
+    [self.playButton setHidden:post.video == nil];
+    
     //Sets Up imageview frame
     CGFloat aspectRatio = post.aspectRatio;
     CGFloat heightAnchorConstant = self.postImageView.frame.size.width * aspectRatio;
     self.postImageViewHeightAnchor.constant = heightAnchorConstant;
     
     [self updateLikeButton];
+}
+- (IBAction)playButtonPressed:(id)sender {
+    NSURL* url = [[NSURL alloc]initWithString:self.post.video.url];
+    AVPlayer *player = [AVPlayer playerWithURL:url];
+
+    // create a player view controller
+    AVPlayerViewController *controller = [[AVPlayerViewController alloc] init];
+    [self.parentVC presentViewController:controller animated:YES completion:nil];
+    controller.player = player;
+    [player play];
 }
 
 -(void) profileButtonPressed{

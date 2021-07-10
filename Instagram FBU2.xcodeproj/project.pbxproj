@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		285FB42AF6044A3D7B80F9A2 /* Pods_Instagram_FBU2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D3A4041FF4F3158E3F002B /* Pods_Instagram_FBU2Tests.framework */; };
 		C19310FA571039C98C76E2F5 /* Pods_Instagram_FBU2_Instagram_FBU2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE488BCA32EE61970CB4281 /* Pods_Instagram_FBU2_Instagram_FBU2UITests.framework */; };
-		DF29866D26990B7D00EFB770 /* VideoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DF29866C26990B7D00EFB770 /* VideoHelper.m */; };
 		DF3CB6BE2698E5350021C212 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF3CB6902698E5350021C212 /* LaunchScreen.storyboard */; };
 		DF3CB6BF2698E5350021C212 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF3CB6922698E5350021C212 /* Main.storyboard */; };
 		DF3CB6C02698E5350021C212 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF3CB6962698E5350021C212 /* Assets.xcassets */; };
@@ -64,8 +63,6 @@
 		88C858E4428BF2A73C9AC98C /* Pods-Instagram FBU2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram FBU2.debug.xcconfig"; path = "Target Support Files/Pods-Instagram FBU2/Pods-Instagram FBU2.debug.xcconfig"; sourceTree = "<group>"; };
 		A96EF7CDEE2FA245E635CA56 /* Pods_Instagram_FBU2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram_FBU2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D24245B7F42C76652AEAD88F /* Pods-Instagram FBU2-Instagram FBU2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram FBU2-Instagram FBU2UITests.debug.xcconfig"; path = "Target Support Files/Pods-Instagram FBU2-Instagram FBU2UITests/Pods-Instagram FBU2-Instagram FBU2UITests.debug.xcconfig"; sourceTree = "<group>"; };
-		DF29866C26990B7D00EFB770 /* VideoHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoHelper.m; sourceTree = "<group>"; };
-		DF29866E26990B8800EFB770 /* VideoHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoHelper.h; sourceTree = "<group>"; };
 		DF3CB6912698E5350021C212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF3CB6932698E5350021C212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF3CB6952698E5350021C212 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -186,8 +183,6 @@
 				DF3CB6A12698E5350021C212 /* Comment.m */,
 				DF3CB6A22698E5350021C212 /* UserProfile.h */,
 				DF3CB6A32698E5350021C212 /* MediaManager.h */,
-				DF29866E26990B8800EFB770 /* VideoHelper.h */,
-				DF29866C26990B7D00EFB770 /* VideoHelper.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -548,7 +543,6 @@
 				DF3CB6C92698E5350021C212 /* TabBarController.m in Sources */,
 				DF3CB6C32698E5350021C212 /* AppDelegate.m in Sources */,
 				DF3CB6CA2698E5350021C212 /* SettingsViewController.m in Sources */,
-				DF29866D26990B7D00EFB770 /* VideoHelper.m in Sources */,
 				DF3CB6CE2698E5350021C212 /* EditPostViewController.m in Sources */,
 				DF3CB6CC2698E5350021C212 /* LoginViewController.m in Sources */,
 				DF3CB6D02698E5350021C212 /* PostTableViewCell.m in Sources */,
