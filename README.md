@@ -36,6 +36,7 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [x] User can post videos in addition to photos
+- [x] User can play videos by pressing a button on the cell
 - [x] CollectionView of posts in profile
 - [x] Custom date label(X hours, minutes, seconds, etc ago)  
 - [x] Posts ImageView adjusts to the aspect ratio
